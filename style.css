@@ -92,6 +92,10 @@ header h1 {
   padding-left: 2.5em;
 }
 
+.pokemon:hover {
+  background-color: #3f3939;
+}
+
 .pokemon p {
   color: white;
   font-weight: 600;
