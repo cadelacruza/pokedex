@@ -111,3 +111,7 @@ header h1 {
   margin-right: 1em;
   color: #797979;
 }
+
+.target {
+  height: 20px;
+}
