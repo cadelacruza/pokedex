@@ -84,3 +84,19 @@ header h1 {
 
   opacity: 0;
 }
+
+.pokemon {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 2.5em;
+}
+
+.pokemon p {
+  color: white;
+  font-weight: 600;
+}
+.pokemon span {
+  margin-right: 1em;
+  color: #797979;
+}
