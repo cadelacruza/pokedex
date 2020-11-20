@@ -10,16 +10,21 @@ img {
 }
 
 #container {
+  height: 100vh;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 100vh;
   grid-template-areas:
     "header details details details details"
+    "master details details details details"
     "master details details details details";
 }
 
 header {
   grid-area: header;
+}
+
+header h1 {
+  display: inline-block;
 }
 
 #master-pane {
@@ -28,6 +33,13 @@ header {
 
 #details-pane {
   grid-area: details;
+  display: grid;
+  align-self: center;
+  justify-self: center;
+}
+
+#menuToggle {
+  display: none;
 }
 
 #menuToggle span {
