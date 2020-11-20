@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-img {
+header img {
   width: 50px;
   height: 50px;
 }
@@ -23,8 +23,15 @@ header {
   grid-row: 1/2;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 header h1 {
   display: inline-block;
+  color: white;
+  margin-left: 10px;
 }
 
 #master-pane {
