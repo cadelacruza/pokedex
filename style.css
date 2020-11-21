@@ -48,6 +48,11 @@ header h1 {
   grid-row: 2/7;
 }
 
+#master-pane:last-child {
+  background-color: tomato;
+  margin-bottom: 10px;
+}
+
 #details-pane {
   grid-area: details;
   grid-column: 2/7;
@@ -110,8 +115,4 @@ header h1 {
 .pokemon span {
   margin-right: 1em;
   color: #797979;
-}
-
-.target {
-  height: 20px;
 }
