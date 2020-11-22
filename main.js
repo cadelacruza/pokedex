@@ -12,6 +12,7 @@ function createMasterItem(pokemon, container, id){
     const article = document.createElement("article");
     article.innerHTML = `<p><span>${id}</span>${pokemon.name}</p>`;
     article.classList.add("pokemon");
+    article.dataset.id = id;
     const parent =  document.querySelector("#master-pane");
     parent.appendChild(article);
   }
