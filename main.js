@@ -34,7 +34,8 @@ function createMasterItem(pokemon, container, id){
 //Detect when the scroll bar reaches the bottom of the master pane aka container
 container.addEventListener('scroll', function() {
     if (container.scrollTop + container.clientHeight >= container.scrollHeight) {
-        const offSet = container.lastChild.datasets;
+        const offSet = container.lastElementChild.dataset.id;
+       // console.log(container.lastElementChild.dataset.id);
         loadMoreItems(offSet, container);
     }
   });
