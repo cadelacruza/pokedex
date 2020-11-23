@@ -10,7 +10,7 @@ async function getElements(offSet){
 //Create html for new Pokemon item on master pane
 function createMasterItem(pokemon, container, id){
     const article = document.createElement("article");
-    article.innerHTML = `<p><span>${id}</span>${pokemon.name}</p>`;
+    article.innerHTML = `<p><span>${id}</span>${pokemon.name.toUpperCase()}</p>`;
     article.classList.add("pokemon");
     article.dataset.id = id;
     const parent =  document.querySelector("#master-pane");
