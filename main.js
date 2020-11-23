@@ -9,12 +9,13 @@ async function getElements(offSet){
 
 //Create html for new Pokemon item on master pane
 function createMasterItem(pokemon, container, id){
-    const article = document.createElement("article");
-    article.innerHTML = `<p><span>${id}</span>${pokemon.name.toUpperCase()}</p>`;
-    article.classList.add("pokemon");
-    article.dataset.id = id;
+    const anchor = document.createElement("a");
+    anchor.innerHTML = `<p><span>${id}</span>${pokemon.name.toUpperCase()}</p>`;
+    anchor.classList.add("pokemon");
+    anchor.dataset.id = id;
+    anchor.href = `#/${pokemon.name}`;
     const parent =  document.querySelector("#master-pane");
-    parent.appendChild(article);
+    parent.appendChild(anchor);
   }
   
   //Load html of pokemons created
