@@ -40,4 +40,10 @@ container.addEventListener('scroll', function() {
         loadMoreItems(offSet, container);
     }
   });
+
+
+  window.addEventListener("hashchange", () =>{
+      console.log(window.location.hash);
+  });
+
   
