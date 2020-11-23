@@ -1,4 +1,5 @@
 const container = document.querySelector("#master-pane");
+const p = document.querySelector("#text");
 
 //Get the data from the API to load more items when scrolling
 async function getElements(offSet){
@@ -20,30 +21,35 @@ function createMasterItem(pokemon, container, id){
   
   //Load html of pokemons created
   async function loadMoreItems(offSet, container){
-      //console.log("sup")
     const pokemons = await getElements(offSet);
-    //console.log(pokemons.results[0]);
     let id = container.lastElementChild.dataset.id;
-    //console.log(pokemons.results.length);
     for(let i = 0; i < pokemons.results.length; i++){
        id++;
        createMasterItem(pokemons.results[i], container, id);
     }
   }
 
+  //Display pokemon details
+  
+
 
 //Detect when the scroll bar reaches the bottom of the master pane aka container
 container.addEventListener('scroll', function() {
     if (container.scrollTop + container.clientHeight >= container.scrollHeight) {
         const offSet = container.lastElementChild.dataset.id;
-       // console.log(container.lastElementChild.dataset.id);
         loadMoreItems(offSet, container);
     }
   });
 
 
-  window.addEventListener("hashchange", () =>{
-      console.log(window.location.hash);
+  window.addEventListener("hashchange", async () =>{
+      const pokemonName = window.location.hash.substring(2);
+      const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
+      const data = await response.json();
+
+     // console.log(data.name);
+
+     p.textContent = data.name;
   });
 
   
