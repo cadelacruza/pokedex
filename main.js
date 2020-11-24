@@ -30,7 +30,7 @@ function createMasterItem(pokemon, container, id){
   }
 
   //Display pokemon details
-  
+
 
 
 //Detect when the scroll bar reaches the bottom of the master pane aka container
@@ -41,15 +41,12 @@ container.addEventListener('scroll', function() {
     }
   });
 
-
+//Check for when details for a pokemon are requested
   window.addEventListener("hashchange", async () =>{
       const pokemonName = window.location.hash.substring(2);
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
       const data = await response.json();
-
-     // console.log(data.name);
-
-     p.textContent = data.name;
+      p.textContent = data.name;
   });
 
   
