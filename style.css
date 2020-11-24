@@ -72,7 +72,6 @@ header h1 {
 .mainInfo {
   grid-column: 1/3;
   grid-row: 1/3;
-  background-color: tomato;
 }
 
 .something {
@@ -87,7 +86,7 @@ header h1 {
   background-color: violet;
 }
 
-#details-pane p {
+#details-pane #text {
   display: none;
   color: #f2f2f2;
   font-weight: bold;
@@ -141,4 +140,61 @@ header h1 {
 .pokemon span {
   margin-right: 15px;
   color: #797979;
+}
+
+#pokemonImage {
+  height: 100%;
+  width: 340px;
+}
+
+#type {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#imgWrapper {
+  height: 340px;
+  width: 100%;
+  background-color: #f4f4f4;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#element,
+#skill {
+  width: 160px;
+  height: 30px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+#element {
+  background-color: #f3dd5f;
+}
+
+#skill {
+  background-color: #a38c22;
+}
+
+#pokemonName {
+  margin-top: 3px;
+  font-weight: 700;
+  font-size: 36px;
+}
+
+#pokemonNum {
+  font-weight: 700;
+  font-size: 24px;
+  color: #c5c5c5;
 }
