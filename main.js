@@ -72,8 +72,20 @@ function createMasterItem(pokemon, container, id){
     document.querySelector("#speed").style.width = `${pokemon.stats[5].base_stat}%`;
     document.querySelector("#speedNum").textContent = pokemon.stats[5].base_stat;
 
+    let total = 0;
+    for(let i = 0; i < 6; i++){
+      total += pokemon.stats[i].base_stat;
+    }
+
+    document.querySelector("#totalNum").textContent = total;
 
   }
+
+
+  //Display pokemon Weight and Height and abilities
+// function changeWH(pokemon){
+//   const h = 
+// }
 
 
 
