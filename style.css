@@ -268,8 +268,14 @@ header h1 {
 .abilities {
   display: flex;
   justify-content: space-around;
-  background-color: #f3dd5f;
   padding: 5px;
+}
+
+.abilities > p {
+  background-color: #e38ed9;
+  border-radius: 5px;
+  font-weight: 600;
+  padding: 5px 10px;
 }
 
 .something > div {
@@ -282,12 +288,14 @@ header h1 {
 }
 
 .w-h > p {
-  background-color: #f06070;
+  background-color: white;
+  border-radius: 5px;
+  font-weight: 600;
   padding: 5px;
 }
 
 #sprites {
   display: flex;
   justify-content: space-evenly;
-  margin: 40px 0;
+  margin-top: 50px;
 }
