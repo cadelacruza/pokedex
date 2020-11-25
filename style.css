@@ -77,13 +77,13 @@ header h1 {
 .something {
   grid-column: 1/3;
   grid-row: 3/6;
-  background-color: turquoise;
+  border: 1px solid black;
 }
 
 .stats {
   grid-column: 3/6;
   grid-row: 1/6;
-  background-color: violet;
+  background-color: #f4f4f4;
 }
 
 #details-pane #text {
@@ -197,4 +197,65 @@ header h1 {
   font-weight: 700;
   font-size: 24px;
   color: #c5c5c5;
+}
+
+.stat {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  height: 35px;
+  margin: 0 10px;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.stat > div {
+  flex: 2;
+}
+
+.stat > p {
+  flex: 1;
+  font-weight: 600;
+}
+
+.meter {
+  height: 10px;
+  border-radius: 25px;
+  padding: 1px;
+}
+
+.meter > span {
+  width: 10%;
+  display: block;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: #f06070;
+}
+
+#stats-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 350px;
+}
+
+#titleStats-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+#titleStats-wrapper > p {
+  border-radius: 20px;
+  font-weight: 800;
+  font-size: 26px;
+  padding: 5px 20px;
+}
+
+#notQuite {
+  opacity: 0;
 }
