@@ -29,7 +29,26 @@ function createMasterItem(pokemon, container, id){
     }
   }
 
-  //Display pokemon details
+  //Display pokemon main Info
+  function changeMain(pokemon){
+    const img = document.querySelector("#pokemonImage");
+    img.src = pokemon.sprites.other["official-artwork"].front_default;
+
+    const element = document.querySelector("#element");
+    element.textContent = pokemon.types[0].type.name.toUpperCase();
+ 
+
+    const skill = document.querySelector("#skill");
+    skill.textContent = pokemon.types.length === 1 ? "UNDEFINED" : pokemon.types[1].type.name.toUpperCase() ;
+
+    const name = document.querySelector("#pokemonName");
+    name.textContent = pokemon.name.toUpperCase();
+
+    const num = document.querySelector("#pokemonNum");
+    num.textContent = pokemon.id;
+    
+  }
+
 
 
 
@@ -45,8 +64,8 @@ container.addEventListener('scroll', function() {
   window.addEventListener("hashchange", async () =>{
       const pokemonName = window.location.hash.substring(2);
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
-      const data = await response.json();
-      p.textContent = data.name;
+      const pokemon = await response.json();
+      changeMain(pokemon);
   });
 
   
