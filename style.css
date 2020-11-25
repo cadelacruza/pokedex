@@ -77,7 +77,12 @@ header h1 {
 .something {
   grid-column: 1/3;
   grid-row: 3/6;
-  border: 1px solid black;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 10px;
 }
 
 .stats {
@@ -258,4 +263,25 @@ header h1 {
 
 #notQuite {
   opacity: 0;
+}
+
+.abilities {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f3dd5f;
+  padding: 5px;
+}
+
+.something > div {
+  width: 100%;
+}
+.w-h {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.w-h > p {
+  background-color: #f06070;
+  padding: 5px;
 }
