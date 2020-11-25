@@ -49,6 +49,32 @@ function createMasterItem(pokemon, container, id){
     
   }
 
+  //Display pokemon stats
+  function changeStats(pokemon){
+    const name = document.querySelector("#statName");
+    name.textContent = `${pokemon.name.toUpperCase()}'S`;
+
+    document.querySelector("#hp").style.width = `${pokemon.stats[0].base_stat}%`;
+    document.querySelector("#hpNum").textContent = pokemon.stats[0].base_stat;
+
+    document.querySelector("#attack").style.width = `${pokemon.stats[1].base_stat}%`;
+    document.querySelector("#attackNum").textContent = pokemon.stats[1].base_stat;
+
+    document.querySelector("#defense").style.width = `${pokemon.stats[2].base_stat}%`;
+    document.querySelector("#defenseNum").textContent = pokemon.stats[2].base_stat;
+
+    document.querySelector("#special-attack").style.width = `${pokemon.stats[3].base_stat}%`;
+    document.querySelector("#speacialAttackNum").textContent = pokemon.stats[3].base_stat;
+
+    document.querySelector("#special-deffense").style.width = `${pokemon.stats[4].base_stat}%`;
+    document.querySelector("#specialDefenseNum").textContent = pokemon.stats[4].base_stat;
+
+    document.querySelector("#speed").style.width = `${pokemon.stats[5].base_stat}%`;
+    document.querySelector("#speedNum").textContent = pokemon.stats[5].base_stat;
+
+
+  }
+
 
 
 
@@ -66,6 +92,9 @@ container.addEventListener('scroll', function() {
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
       const pokemon = await response.json();
       changeMain(pokemon);
+      changeStats(pokemon);
+      changeWH(pokemon);
+      changeSprites(pokemon);
   });
 
   
