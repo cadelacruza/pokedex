@@ -118,10 +118,20 @@ container.addEventListener('scroll', function() {
       const pokemonName = window.location.hash.substring(2);
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
       const pokemon = await response.json();
+
+      document.querySelector("#text").style.display = "none";
+
       changeMain(pokemon);
       changeStats(pokemon);
       changeWH(pokemon);
       changeSprites(pokemon);
+
+      document.querySelector("#details-pane").classList.add("active");
+      document.querySelector(".mainInfo").classList.add("active");
+      document.querySelector(".mainInfo").style.display = "block";
+      document.querySelector(".something").classList.add("active");
+      document.querySelector(".stats").style.display = "block";
+      document.querySelector(".stats").classList.add("active");
   });
 
   
