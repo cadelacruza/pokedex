@@ -98,7 +98,12 @@ function changeWH(pokemon){
 }
 
 
-
+//Display pokemon's sprites
+function changeSprites(pokemon){
+  document.querySelector("#uno").src = pokemon.sprites.back_default;
+  document.querySelector("#dos").src = pokemon.sprites.front_default;
+  document.querySelector("#tres").src = pokemon.sprites.back_shiny;
+}
 
 //Detect when the scroll bar reaches the bottom of the master pane aka container
 container.addEventListener('scroll', function() {
