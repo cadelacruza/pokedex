@@ -129,7 +129,7 @@ header h1 {
   margin-bottom: 5px;
   position: relative;
 
-  background: #cdcdcd;
+  background: white;
   border-radius: 3px;
 }
 
@@ -349,7 +349,7 @@ header h1 {
 }
 
 @media screen and (max-width: 800px) {
-  #details-pane.active {
+  #details-pane {
     grid-column: 1/7;
     grid-row: 2/7;
   }
@@ -360,6 +360,8 @@ header h1 {
 
   #master-pane.active {
     display: block;
+    grid-column: 1/7;
+    grid-row: 2/7;
   }
 
   header {

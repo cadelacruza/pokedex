@@ -105,6 +105,15 @@ function changeSprites(pokemon){
   document.querySelector("#tres").src = pokemon.sprites.back_shiny;
 }
 
+//Display master pane 
+function displayMaster(){
+  document.querySelector("#text").style.display = "none";
+    const master = document.querySelector("#master-pane");
+    const details = document.querySelector("#details-pane");
+    details.classList.toggle("active");
+    master.classList.toggle("active");
+}
+
 //Detect when the scroll bar reaches the bottom of the master pane aka container
 container.addEventListener('scroll', function() {
     if (container.scrollTop + container.clientHeight >= container.scrollHeight) {
@@ -134,4 +143,7 @@ container.addEventListener('scroll', function() {
       document.querySelector(".stats").classList.add("active");
   });
 
+  document.querySelector("#menuToggle").addEventListener("click", () => {
+    displayMaster();
+  });
   
