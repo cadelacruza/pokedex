@@ -82,10 +82,20 @@ function createMasterItem(pokemon, container, id){
   }
 
 
-  //Display pokemon Weight and Height and abilities
-// function changeWH(pokemon){
-//   const h = 
-// }
+//Display pokemon Weight and Height and abilities
+function changeWH(pokemon){
+  const h = pokemon.height;
+  const w = pokemon.weight;
+
+  document.querySelector("#kg").textContent = `${w / 10} kg`;
+  document.querySelector("#lbs").textContent = `${Math.round((((w/10) * 2.205)) * 10) / 10} lbs`;
+
+  document.querySelector("#m").textContent = `${h / 10} m`;
+  document.querySelector("#foot").textContent = `${Math.round((((h/10) * 3.28)) * 10) / 10} ft`;
+
+  document.querySelector("#a1").textContent = pokemon.abilities[0].ability.name.toUpperCase();
+  document.querySelector("#a2").textContent = pokemon.abilities.length === 1 ? "UNDEFINED" : pokemon.abilities[1].ability.name.toUpperCase();
+}
 
 
 
