@@ -110,8 +110,17 @@ function displayMaster(){
   document.querySelector("#text").style.display = "none";
     const master = document.querySelector("#master-pane");
     const details = document.querySelector("#details-pane");
-    details.classList.toggle("active");
-    master.classList.toggle("active");
+    details.style.display = "none";
+    master.classList.add("active");
+}
+
+//Display details pane aka poekemonInfo
+function displayDetails(){
+  const master = document.querySelector("#master-pane");
+  const details = document.querySelector("#details-pane");
+
+  master.classList.remove("active");
+  details.style.display = "grid";
 }
 
 //Detect when the scroll bar reaches the bottom of the master pane aka container
@@ -146,4 +155,10 @@ container.addEventListener('scroll', function() {
   document.querySelector("#menuToggle").addEventListener("click", () => {
     displayMaster();
   });
+
+  document.querySelector("#master-pane").addEventListener("click", (e) =>{
+    if(e.target.classList.contains("pokemon")){
+      displayDetails();
+    }
+  })
   
