@@ -347,3 +347,31 @@ header h1 {
     grid-row: 2/12;
   }
 }
+
+@media screen and (max-width: 800px) {
+  #details-pane.active {
+    grid-column: 1/7;
+    grid-row: 2/7;
+  }
+
+  #master-pane {
+    display: none;
+  }
+
+  #master-pane.active {
+    display: block;
+  }
+
+  header {
+    grid-column: 1/7;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  #menuToggle {
+    display: block;
+  }
+}
