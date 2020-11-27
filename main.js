@@ -156,7 +156,12 @@ container.addEventListener('scroll', function() {
       document.querySelector(".stats").classList.add("active");
   });
 
-  window.addEventListener("load", (e) =>{
+  window.addEventListener("load", async (e) =>{
+    const pokemonName = window.location.hash.substring(2);
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
+    const pokemon = await response.json();
+
+    document.querySelector("#text").style.display = "none";
     changeMain(pokemon);
     changeStats(pokemon);
     changeWH(pokemon);
