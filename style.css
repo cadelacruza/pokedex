@@ -377,3 +377,31 @@ header h1 {
     display: block;
   }
 }
+
+@media screen and (max-width: 590px) {
+  header > h1 {
+    display: none;
+  }
+
+  header > img {
+    margin-right: 30px;
+  }
+
+  #details-pane > .mainInfo {
+    grid-column: 1/6;
+  }
+
+  #details-pane > .something {
+    grid-column: 1/6;
+    grid-row: 4/5;
+    flex-direction: row;
+  }
+
+  #a1,
+  #a2 {
+    padding: 1px 10px;
+  }
+  #details-pane > .stats {
+    grid-row: 5/6;
+  }
+}

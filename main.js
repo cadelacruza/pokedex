@@ -111,7 +111,11 @@ function displayMaster(){
     const master = document.querySelector("#master-pane");
     const details = document.querySelector("#details-pane");
     details.style.display = "none";
-    master.classList.add("active");
+    if(master.classList.contains("active")){
+      master.classList.remove("active");
+    }else{
+      master.classList.add("active");
+    }
 }
 
 //Display details pane aka poekemonInfo
