@@ -180,7 +180,8 @@ container.addEventListener('scroll', function() {
   });
 
   document.querySelector("#master-pane").addEventListener("click", (e) =>{
-    if(e.target.classList.contains("pokemon" || e.target.tagName === "span")){
+    console.log(e.target.tagName)
+    if(e.target.classList.contains("pokemon") || e.target.tagName === "P" || e.target.tagName === "SPAN"){
       displayDetails();
     }
   })
