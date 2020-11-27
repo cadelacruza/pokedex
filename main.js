@@ -112,7 +112,7 @@ function displayMaster(){
     const details = document.querySelector("#details-pane");
     console.log(details.style.display );
     if(details.style.display === "none"){
-      details.style.display = "block";
+      details.style.display = "grid";
     }else{
       details.style.display = "none";
 
