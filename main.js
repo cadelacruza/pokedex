@@ -156,6 +156,20 @@ container.addEventListener('scroll', function() {
       document.querySelector(".stats").classList.add("active");
   });
 
+  window.addEventListener("load", (e) =>{
+    changeMain(pokemon);
+    changeStats(pokemon);
+    changeWH(pokemon);
+    changeSprites(pokemon);
+
+    document.querySelector("#details-pane").classList.add("active");
+    document.querySelector(".mainInfo").classList.add("active");
+    document.querySelector(".mainInfo").style.display = "block";
+    document.querySelector(".something").classList.add("active");
+    document.querySelector(".stats").style.display = "block";
+    document.querySelector(".stats").classList.add("active");
+  })
+
   document.querySelector("#menuToggle").addEventListener("click", () => {
     displayMaster();
   });
