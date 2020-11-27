@@ -170,7 +170,7 @@ header h1 {
 
 #pokemonImage {
   height: 100%;
-  width: 340px;
+  width: 100%;
 }
 
 #type {
