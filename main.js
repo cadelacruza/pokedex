@@ -110,7 +110,13 @@ function displayMaster(){
   document.querySelector("#text").style.display = "none";
     const master = document.querySelector("#master-pane");
     const details = document.querySelector("#details-pane");
-    details.style.display = "none";
+    console.log(details.style.display );
+    if(details.style.display === "none"){
+      details.style.display = "block";
+    }else{
+      details.style.display = "none";
+
+    }
     if(master.classList.contains("active")){
       master.classList.remove("active");
     }else{
