@@ -350,6 +350,13 @@ header h1 {
 }
 
 @media screen and (max-width: 800px) {
+  #details-pane {
+    grid-column: 1/7;
+  }
+
+  #details-pane #text {
+    font-size: 60px;
+  }
   #details-pane.active {
     grid-column: 1/7;
     grid-row: 2/7;
