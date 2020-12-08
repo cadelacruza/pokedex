@@ -16,4 +16,7 @@ This project uses the Master-Detail pattern.
 A list of items is displayed and the user can obtain details by clicking these items.
 
 # Supported Browsers
-
+* Google Chrome
+* Mozilla Firefox
+* Microsoft Edge
+* Probably Safari but I don't have a Mac to test
